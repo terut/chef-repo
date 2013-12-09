@@ -13,13 +13,6 @@ service 'iptables' do
   supports status: true, restart: true
 end
 
-bash 'backup iptables' do
-  code <<-EOC
-    cp -p #{file_path} #{file_path}.#{Date.today}
-  EOC
-  only_if { File.exist?(file_path) }
-end
-
 template file_path do
   source 'iptables.erb'
   owner 'root'
