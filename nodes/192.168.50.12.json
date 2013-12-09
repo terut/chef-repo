@@ -2,6 +2,7 @@
   "run_list":[
     "yum::epel",
     "users",
+    "iptables",
     "jenkins",
     "ruby::rbenv"
   ]
