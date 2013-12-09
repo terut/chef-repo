@@ -61,7 +61,7 @@ bash 'install ruby' do
     rbenv install 2.0.0-p353
     rbenv global 2.0.0-p353
   EOC
-  not_if '~/.profile; rbenv versions | grep 2.0.0-p353'
+  not_if "sudo -u #{target_user} sh -c 'cd ~/;. ~/.profile; rbenv versions | grep 2.0.0-p353'"
 end
 
 template "#{home}/.gemrc" do
@@ -79,5 +79,5 @@ bash 'install bundle' do
     . ~/.profile
     gem install bundle
   EOC
-  not_if '~/.profile; echo $PATH; gem list | grep bundler'
+  not_if "sudo -u #{target_user} sh -c 'cd ~/;. ~/.profile; gem list | grep bundler'"
 end
