@@ -1,0 +1,32 @@
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+symbolic-links=0
+
+character-set-server=utf8mb4
+collation-server=utf8mb4_general_ci
+skip-character-set-client-handshake 
+innodb_file_format=Barracuda
+innodb_file_format_max=Barracuda
+innodb_file_per_table
+innodb_large_prefix
+innodb_log_file_size=64M
+innodb_buffer_pool_size=128M
+
+# write log buffer to log file per commit, and disk flush per seconds
+# you have to use only test, and you have to use 1 with other environment
+innodb_flush_log_at_trx_commit=2
+
+[mysql]
+default-character-set=utf8mb4
+
+[client]
+default-character-set=utf8mb4
+
+[mysqldump]
+default-character-set=utf8mb4
+
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid

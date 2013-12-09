@@ -4,6 +4,7 @@
     "users",
     "iptables",
     "jenkins",
-    "ruby::rbenv"
+    "ruby::rbenv",
+    "mysql"
   ]
 }
