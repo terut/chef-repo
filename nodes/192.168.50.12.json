@@ -5,6 +5,7 @@
     "iptables",
     "jenkins",
     "ruby::rbenv",
-    "mysql"
+    "mysql",
+    "redis"
   ]
 }
