@@ -1,0 +1,15 @@
+{
+  "name": "data_bag_item_ssh_jenkins",
+  "json_class": "Chef::DataBagItem",
+  "chef_type": "data_bag_item",
+  "data_bag": "ssh",
+  "raw_data": {
+    "id": "jenkins",
+    "private_key": {
+      "encrypted_data": "w8KQclJ4knfgSy4tHEQd3bn1R0qGnxe+/ir0ryKM+S7jK28+7ld57IBz+Kvo\nlLF7i7Dg+keFeVtnoxmFJ4xQWtIvJlZ9wwOFvUPDDMzjV64E6IZ1t8y4njV+\nLLewnOE42ieB/VdkgudjhMIkNTfVY7BvKAw4UCiw/yJvi355PFFfARfkTpUc\nFZBCeZlHibJolf73DeKxPUSsPT+rLbnUXHkd7YhoXs7p/w7gIxRs1y1AXt2e\n5Aio8bzFNQCSOP2wlZOzaPsUK1s8JBjn/K352pdVuhTee1FBMc90RXDTXvmT\n7YPU4tyofAfm0TFn8z5+UAn083kqV0rfWbmTS1KYu2n6fkuTB9aPaimjNNu7\n3fFoSPuX2LW/dm60F7ljs8JvikdW4HoQrJZI6CWx0RdS14x52kQ8TFb07hGD\nSCqgFmQkXaG2aDaanxbPrx/3jFC5scUZu5/+TlQRw9PeINma2acvbnNRgIqp\nDIU9m7VUOnAZKq/ejiJKzry9jKS0FTGXb67x8hSmEYt21eBsFy21hi0wH7ro\nlJTVd33RKoP88Nh3NWwKBvzmPDk/YleiT159EEiHlIy0dMR+3VDDMnmgPwN1\npHV+3ESYBqSJMnBnHS24AMWS+BvXjxvnRm588ZXqwqLAYn3VIKLTWE0KrZr9\nN4C2/o0e6BGCLurYoopvg+Rx/m/IBovuc11CfwEi04DhM/ub3dVuAyNmOVh1\nG9JylavCnwWN1WZ1YAzqMruUCFf/9h3HtPwj29wV098hV2BjWp+YCBsh7xX7\nS48qZfQfnH3ZxtVNcKhZfdmpye5WWnXEHc5hFzaa3x8RE8UMaCCxwNbCVfX2\nWGCvL9BUhguAVfEOYDrMIzwZQ/+IEiRMIU1lHhPk7jO1lGElyGKUlBpdpSfq\nd5eD/DsePtDv2J4YyrGvMgaFWZkWrVkmSzck8T0=\n",
+      "iv": "J+XYxLuxbq1XgngwEHOBOw==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    }
+  }
+}

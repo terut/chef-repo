@@ -6,6 +6,7 @@
     "jenkins",
     "ruby::rbenv",
     "mysql",
-    "redis"
+    "redis",
+    "ssh::config"
   ]
 }
