@@ -1,0 +1,33 @@
+#
+# Cookbook Name:: rails
+# Recipe:: default
+#
+# Copyright 2013, YOUR_COMPANY_NAME
+#
+# All rights reserved - Do Not Redistribute
+#
+%w{ libxml2-devel libxslt-devel ImageMagick-devel }.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+filename = "atrpms-repo-6-6.el6.x86_64.rpm"
+
+cookbook_file "/tmp/#{filename}" do
+  source "#{filename}"
+  mode 0644
+  # TODO checksum
+end
+
+
+bash 'add atrpms repos' do
+  code <<-EOC
+    rpm -i /tmp/#{filename}
+  EOC
+end
+
+package 'qt47-webkit-devel' do
+  action :install
+  options '--enablerepo=atrpms-testing'
+end
