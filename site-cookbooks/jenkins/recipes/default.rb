@@ -14,6 +14,10 @@ package 'java-1.7.0-openjdk' do
   action :install
 end
 
+package 'wget' do
+  action :install
+end
+
 bash 'add repos' do
   code <<-EOC
     wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo

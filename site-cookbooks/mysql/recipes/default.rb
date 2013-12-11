@@ -11,6 +11,12 @@ suffix = 'el6.x86_64.rpm'
 
 config_file_path = '/etc/my.cnf'
 mysql_home = '/var/lib/mysql'
+
+
+package 'libaio-devel' do
+  action :install
+end
+
 %w{ MySQL-shared MySQL-client MySQL-devel MySQL-server }.each do |pkg|
   filename = "#{pkg}-#{version}.#{suffix}" 
   cookbook_file "/tmp/#{filename}" do
