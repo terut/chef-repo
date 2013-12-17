@@ -81,3 +81,14 @@ bash 'install bundle' do
   EOC
   not_if "sudo -u #{target_user} sh -c 'cd ~/;. ~/.profile; gem list | grep bundler'"
 end
+
+bash 'update rake' do
+  user target_user
+  group target_group
+  environment 'HOME' => home
+  code <<-EOC
+    . ~/.profile
+    gem update -f rake
+    gem cleanup
+  EOC
+end
