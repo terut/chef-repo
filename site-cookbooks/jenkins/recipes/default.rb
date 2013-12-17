@@ -30,6 +30,13 @@ package 'jenkins' do
   action :install
 end
 
+template '/etc/sysconfig/jenkins' do
+  source 'jenkins'
+  owner 'root'
+  group 'root'
+  mode 0644
+end
+
 service 'jenkins' do
   action [ :enable, :start ]
   supports start: true, stop: true, restart: true
