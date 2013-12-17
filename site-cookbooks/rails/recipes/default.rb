@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-%w{ libxml2-devel libxslt-devel ImageMagick-devel }.each do |pkg|
+%w{ libxml2-devel libxslt-devel ImageMagick-devel xorg-x11-server-Xvfb }.each do |pkg|
   package pkg do
     action :install
   end
@@ -25,9 +25,11 @@ bash 'add atrpms repos' do
   code <<-EOC
     rpm -i /tmp/#{filename}
   EOC
+  creates '/etc/yum.repos.d/atrpms.repo'
 end
 
 package 'qt47-webkit-devel' do
   action :install
   options '--enablerepo=atrpms-testing'
+  not_if { File.exist?('/usr/bin/qmake-qt47') }
 end
