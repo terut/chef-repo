@@ -1,0 +1,13 @@
+{
+  "run_list":[
+    "yum::epel",
+    "users",
+    "postfix",
+    "jenkins",
+    "ruby::rbenv",
+    "mysql",
+    "redis",
+    "ssh::config",
+    "rails"
+  ]
+}
