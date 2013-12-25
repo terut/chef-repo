@@ -33,3 +33,10 @@ package 'qt47-webkit-devel' do
   options '--enablerepo=atrpms-testing'
   not_if { File.exist?('/usr/bin/qmake-qt47') }
 end
+
+# capybara-webkit >~ 1.0.0
+%w{ qt5-qtwebkit-devel boost-devel libcurl-devel }.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
