@@ -6,11 +6,15 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+package 'ruby-shadow' do
+  action :install
+end
+
 user 'dev' do
   comment 'developer'
   home '/home/dev'
   shell '/bin/bash'
-  password 'dev'
+  password '$1$YS/DvM0r$UaP1QrRms1m8QvzC5ZjKo1'
   supports manage_home: true
   action [:create, :manage]
 end
